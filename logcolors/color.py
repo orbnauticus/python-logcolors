@@ -25,8 +25,9 @@ Color(7, None, False)
 
 class Color(object):
     """
-    >>> print(Red('Red Text'))
-    \x1b[31mRed Text\x1b[0m
+    >>> print(Red('Red Text'), 'Clear',
+    ...       White.with_background(Black)("White on Black"))
+    \x1b[31mRed Text\x1b[0m Clear \x1b[37;40mWhite on Black\x1b[0m
     """
     def __init__(self, foreground, background=None, bold=False):
         self.foreground = foreground
