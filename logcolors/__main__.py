@@ -1,10 +1,11 @@
 
+from logcolors.logging import handlers
+
 import logging
-import logcolors
 
 logging.basicConfig(
     level=logging.DEBUG,
-    handlers=logcolors.handlers(),
+    handlers=handlers(),
 )
 
 logging.getLogger('blue').debug('THIS IS A DEBUG MESSAGE')

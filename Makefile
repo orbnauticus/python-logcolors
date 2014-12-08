@@ -16,7 +16,7 @@ all: build
 
 test: build
 	find $(NAME) -name '*.py' -exec pep8 --show-source '{}' \;
-	$(TESTPYTHON) -m doctest logcolors/__init__.py
+#	$(TESTPYTHON) -m doctest logcolors
 	$(TESTPYTHON) -m logcolors
 
 build: $(SRCFILES)
